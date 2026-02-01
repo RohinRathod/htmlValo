@@ -4,6 +4,7 @@ const maxDodges = 5;  // Max dodges allowed
 // Move to the next question or show the final message
 function nextQuestion(accepted, questionNumber) {
     if (accepted) {
+            document.querySelectorAll('.question').forEach(q => q.classList.remove('active'));
             document.querySelector('#final').classList.add('active');
             celebrateAcceptance();
     }
